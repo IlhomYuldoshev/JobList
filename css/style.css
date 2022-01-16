@@ -1,0 +1,241 @@
+/* FONT STYLES */
+@font-face {
+  font-family: "Spartan";
+  font-style: normal;
+  font-weight: 500;
+  src: local(""), url("../fonts/spartan-v7-latin-500.woff2") format("woff2"),
+    url("../fonts/spartan-v7-latin-500.woff") format("woff");
+}
+@font-face {
+  font-family: "Spartan";
+  font-style: normal;
+  font-weight: 700;
+  src: local(""), url("../fonts/spartan-v7-latin-700.woff2") format("woff2"),
+    url("../fonts/spartan-v7-latin-700.woff") format("woff");
+}
+
+/* ROOT STYLES */
+:root {
+  --main-bg-color: #effafa;
+  --blue-text-color: #5ca5a5;
+  --black-text-color: #2b3939;
+}
+
+/* GLOBAL STYLES */
+html {
+  box-sizing: border-box;
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: "Spartan", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+  color: var(--black-text-color);
+  background-color: var(--main-bg-color);
+}
+
+.container {
+  max-width: 1366px;
+  width: 100%;
+  padding-left: 128px;
+  padding-right: 128px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* BUTTON STYLES */
+.btn {
+  color: #fff;
+  padding: 6px 8px 4px;
+  border-radius: 12px;
+  font-size: 11px;
+  line-height: 14px;
+  text-transform: uppercase;
+  border: none;
+  margin-right: 8px;
+}
+
+.btn-new {
+  background-color: var(--blue-text-color);
+}
+
+.btn-featured {
+  background-color: var(--black-text-color);
+}
+/* MAIN CONTENT */
+.main-content {
+  padding-top: 76px;
+  padding-bottom: 120px;
+}
+
+/* HEADER */
+.site-header {
+  max-width: 1366px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 156px;
+  background-color: #5ca5a5;
+  background-image: url(../images/header-bg.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+/* JOB LIST */
+.job-list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.job-item {
+  padding: 32px 40px 32px 35px;
+  border-left: 5px solid transparent;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 15px 20px -5px rgba(13, 113, 130, 0.15);
+  transition: border 0.3s ease;
+}
+
+.job-item:not(:last-child) {
+  margin-bottom: 24px;
+}
+
+.job-item:hover {
+  border-color: var(--blue-text-color);
+}
+
+.item-job {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.job-info {
+  display: flex;
+  align-items: center;
+}
+
+.job-image {
+  width: 88px;
+  height: 88px;
+  margin-right: 24px;
+}
+
+.job-info-header {
+  font-weight: 700;
+  color: var(--blue-text-color);
+  text-transform: capitalize;
+  margin-bottom: 8px;
+}
+
+.job-info-header-inner {
+  margin-right: 16px;
+  white-space: nowrap;
+}
+
+.job-info-title {
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.job-info-title-link {
+  color: var(--black-text-color);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  text-transform: capitalize;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+.job-info-title-link:hover {
+  color: var(--blue-text-color);
+}
+
+.job-info-title-link:active {
+  opacity: 0.6;
+}
+
+.job-info-footer {
+  display: flex;
+  align-items: center;
+  color: #7c8f8f;
+  font-size: 15px;
+  line-height: 24px;
+}
+
+.job-info-footer-item {
+  position: relative;
+  white-space: nowrap;
+  text-transform: capitalize;
+}
+
+.job-info-footer-item:not(:first-child) {
+  margin-left: 36px;
+}
+
+.job-info-footer-item:not(:first-child)::before {
+  position: absolute;
+  left: -18px;
+  top: calc(50% - 2px);
+  background-color: #b7c4c4;
+  border-radius: 50%;
+  width: 4px;
+  height: 4px;
+  content: "";
+}
+
+.job-skills-list {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.job-skills-item {
+  padding: 4px 8px;
+  font-weight: 700;
+  border-radius: 4px;
+  font-size: 13px;
+  line-height: 24px;
+  color: var(--blue-text-color);
+  background-color: rgba(92, 165, 165, 0.1);
+  text-transform: capitalize;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+}
+
+.job-skills-item:hover {
+  background-color: var(--blue-text-color);
+  color: #fff;
+}
+
+.job-skills-item:active {
+  opacity: 0.6;
+}
+
+.job-skills-item:not(:last-child) {
+  margin-right: 16px;
+}
